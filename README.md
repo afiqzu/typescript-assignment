@@ -26,7 +26,7 @@ Application layout design is described [here](https://www.figma.com/file/N11dgM8
 - Write code according to the eslint config
 - Build via webpack with ts-loader (just use predefined configs)
 
-## Main tasks (implement first)
+## Main tasks (implemented)
 All of the following main tasks must be completed for the test assignment to be considered completed:
 - Implement 2 pages according to layout
 - The maximum number of messages simultaneously displayed on the page is regulated by the "notifications count" parameter
@@ -34,13 +34,18 @@ All of the following main tasks must be completed for the test assignment to be 
 (Position 3) or right (Position 4) edge (messages grow upwards). The position of messages on the page is regulated by the "notifications position" parameter
 - The message should disappear from the screen after the timeout specified by the parameter "notifications disappear time"
 
-## Additional tasks (implement at will)
+## Additional tasks (implemented)
 All of the following additional tasks are optional, but give additional points. Each additional task will be evaluated separately, but they must be done in the order described below, as some tasks are interdependent. The more additional tasks will be done the higher the final score.
 Additional tasks:
 - The message can be closed by clicking X in the upper right corner of the message
-- If you hover over a message, its timeout is reset, and while the focus is on the message, it does not disappear. As soon as the focus goes away, the timeout countdown starts again
 - If the messages do not fit on the screen, then show the maximum number of messages that can be FULLY rendered on the page, the oldest messages are truncated
 - If multiple browser tabs are open, closing a message propagates to all currently open tabs (when closing a message, it disappears on all tabs)
 - Changing the settings is applied immediately on all tabs (without reloading)
+
+## Additional tasks (not implemented)
+- If you hover over a message, its timeout is reset, and while the focus is on the message, it does not disappear. As soon as the focus goes away, the timeout countdown starts again
+
+## Additional tasks (implemented at own discretion)
+- Toast effect for when settings are changed
 
 If any part of the task is not clear - please do not hesitate to contact us with your questions, we are always happy to help and explain.
