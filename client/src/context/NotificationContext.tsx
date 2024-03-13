@@ -55,12 +55,8 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
         };
     }, []);
 
-
-    return (
-        <NotificationContext.Provider value={{ notifications, setNotifications }}>
-            {children}
-        </NotificationContext.Provider>
-    );
+    return <NotificationContext.Provider
+        value={{ notifications, setNotifications }}>{children}</NotificationContext.Provider>;
 };
 
 export const useNotifications = () => useContext(NotificationContext);

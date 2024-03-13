@@ -44,7 +44,7 @@ const Settings = () => {
                 <div className="title">
                     <p>Notification position</p>
                 </div>
-                <div style={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
+                <div className="position-settings">
                     <div>
                         <label htmlFor="position1">Position 1</label>
                         <input
