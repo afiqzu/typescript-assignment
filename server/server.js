@@ -19,8 +19,8 @@ function eventsHandler(request, response) {
     const clientId = Date.now();
 
     const newClient = {
-      id: clientId,
-      response
+        id: clientId,
+        response
     };
 
     console.log(`${clientId} Connection created`);
@@ -44,16 +44,16 @@ function sendWithRandomTime(client) {
             "msg_id": uuidv4(),
             "time": Math.floor(Date.now() / 1000),
             "msg": getRandomText()
-         };
+        };
         client.response.write(`data: ${JSON.stringify(newFact)}\n\n`)
-    
+
         setTimeout(sendWithRandomTime(client), rand * 1000);
     }
 }
 
 function getRandomText() {
     const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus vestibulum mattis ullamcorper velit sed ullamcorper. Dui id ornare arcu odio ut sem. Risus ultricies tristique nulla aliquet enim tortor at auctor. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Justo nec ultrices dui sapien eget mi proin sed libero. Consequat interdum varius sit amet mattis vulputate. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum."
-    
+
     const min = 1, max = 200;
     const rand = Math.floor(Math.random() * (max - min + 1) + min);
 

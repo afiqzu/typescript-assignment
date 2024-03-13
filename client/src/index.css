@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    background-image: linear-gradient(to right, #1C212F, #030919);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 2.5rem;
+}
+
+.nav-button {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-button:hover {
+    color: white;
+}
+
+.active-nav-button {
+    color: #8DCAFE;
+    text-decoration: underline;
+    text-underline-offset: 1.5rem;
+}
+
+.notification {
+    display: flex;
+    background-color: rgba(44, 49, 62, 0.4);
+    padding: 16px;
+    border-radius: 16px;
+    width: 360px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.notification.p1, .notification.p3 {
+    animation: slideInLeft 0.3s ease-in-out;
+}
+
+.notification.p2, .notification.p4 {
+    animation: slideInRight 0.3s ease-in-out;
+}
+
+.notifications-hidden {
+    background-color: rgba(44, 49, 62, 0.2);
+    padding: 16px;
+    border-radius: 16px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notifications-hidden button {
+    background-color: transparent;
+    border-style: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.notification button {
+    background-color: transparent;
+    border-style: none;
+    color: white;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.notification-stack {
+    position: absolute;
+    gap: 0.5rem;
+    display: flex;
+}
+
+.position-1,
+.position-3 {
+    left: 2rem;
+}
+
+.position-2,
+.position-4 {
+    right: 2rem;
+}
+
+.position-1,
+.position-2 {
+    flex-direction: column;
+}
+
+.position-3,
+.position-4 {
+    bottom: 2rem;
+    flex-direction: column-reverse;
+}
+
+input {
+    background-color: transparent;
+    color: white;
+    border-style: none;
+    width: 50px;
+    outline: none;
+    font-size: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.settings-tab {
+    background-color: rgba(44, 49, 62, 0.84);
+    border-radius: 16px;
+    max-width: 912px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+
+.title {
+    min-width: 300px;
+}
+
+.save-button {
+    background-color: #030919;
+    border-style: none;
+    max-width: fit-content;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.toast {
+    position: fixed;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #030919;
+    color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    transition: top 0.3s ease-in-out;
+}
+
+.toast.show {
+    top: 20px;
+}
+
+.toast.hide {
+    top: -60px;
+}
+
+.toast-message {
+    margin-right: 16px;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+

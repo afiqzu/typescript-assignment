@@ -1,6 +1,23 @@
+import { Navbar } from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Main from "./pages/Main";
+import Settings from "./pages/Settings";
+import { SettingsProvider } from "./context/SettingsContext";
+import { NotificationProvider } from "./context/NotificationContext";
+
 const App = () => {
     return (
-        <h1>Write your code here!</h1>
+        <SettingsProvider>
+            <NotificationProvider>
+                <div className="container">
+                    <Navbar />
+                    <Routes>
+                        <Route index element={<Main />} />
+                        <Route path="/settings" element={<Settings />} />
+                    </Routes>
+                </div>
+            </NotificationProvider>
+        </SettingsProvider>
     );
 };
 
